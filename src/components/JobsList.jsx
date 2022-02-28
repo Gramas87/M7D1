@@ -7,7 +7,7 @@ const JobsList = () => {
     const [jobs, SetJobs] = useState([])
     useEffect(()=>{fetchJobs()},[query])
 
-    
+
     
 const fetchJobs = async () => {
 try {
