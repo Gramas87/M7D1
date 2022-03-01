@@ -32,7 +32,7 @@ return(
     <FormControl as="textarea" aria-label="search" onChange={e => setQuery(e.currentTarget.value)} value={query} />
   </InputGroup>
     
-    {jobs.map(job => {return <SingleJob key={job._id} title={job.title} company={job.company_name} category={job.category_name} />} )}
+    {jobs.map(job => {return <SingleJob key={job._id} data={job} title={job.title} company={job.company_name} category={job.category_name} />} )}
     </>
      )
 

@@ -2,7 +2,7 @@ import { Card } from "react-bootstrap";
 import {Link} from "react-router-dom"
 
 
-const SingleJob = ({ title, company, category }) => {
+const SingleJob = ({ data, title, company, category }) => {
     
   return (
     <>
