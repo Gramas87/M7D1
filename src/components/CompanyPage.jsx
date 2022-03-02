@@ -14,7 +14,7 @@ const CompanyPage = ({ company, title}) => {
             if (response.ok){
                 let compdata = await response.json();
                 console.log(compdata)
-                // SetCompanyJobs(compdata.data)
+             SetCompanyJobs(compdata.data)
 
             }else{
                 console.log("error fetching company")
@@ -31,7 +31,7 @@ const CompanyPage = ({ company, title}) => {
     
     return(
         <>
-        <SingleJob company={company} title={title}   />
+         {companyjobs.map(job => {return <SingleJob title={job.title} company={job.company_name}  />} )}
         </>
     )
 }
