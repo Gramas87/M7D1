@@ -1,8 +1,19 @@
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import {Link} from "react-router-dom"
+import {connect} from "react-redux"
+import {addFavoritesAction} from "../redux/actions"
+// const mapStateToProps = () =>({
 
+// }
+// )
 
-const SingleJob = ({ data, title, company, category }) => {
+// const mapDispatchToProps= (dispatch) =>({
+//     addFavorites: (companyToAdd) => {
+//     dispatch(addFavoritesAction(companyToAdd))
+//     }
+// })
+
+const SingleJob = ({ addFavorites, title, company, category }) => {
     
   return (
     <>
@@ -10,10 +21,13 @@ const SingleJob = ({ data, title, company, category }) => {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Link className="nav-link" to={`/${company}`}> <Card.Text>{company}</Card.Text> </Link>
+          <Button >add company to favorites companies</Button>
+
           <Card.Text>{category}</Card.Text>
         </Card.Body>
       </Card>
     </>
   );
 };
-export default SingleJob;
+export default  SingleJob;
+

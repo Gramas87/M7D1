@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom"
 import {useState, useEffect} from "react"
 import JobsList from "./JobsList"
 
-const CompanyPage = ({ company, title}) => {
+const CompanyPage = () => {
      const [companyjobs, SetCompanyJobs] = useState([])
     const params = useParams()
     
@@ -31,7 +31,7 @@ const CompanyPage = ({ company, title}) => {
     
     return(
         <>
-         {companyjobs.map(job => {return <SingleJob title={job.title} company={job.company_name}  />} )}
+         {companyjobs.map(job => {return <SingleJob key={job._id} title={job.title} company={job.company_name}  />} )}
         </>
     )
 }
