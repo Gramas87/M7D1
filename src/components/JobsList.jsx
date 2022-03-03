@@ -5,7 +5,7 @@ import {Component} from "react"
 import {connect} from "react-redux"
 import {Link} from "react-router-dom"
 import {addFavoritesAction} from "../redux/actions"
-const mapStateToProps = () =>({
+const mapStateToProps = (state) =>({
 
 }
 )
